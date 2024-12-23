@@ -12,7 +12,7 @@
 #       - Change $SourceFilename, below, to your Excel file name.
 #       - Change $SourceFileDirectory to the directory where $SourceFilename resides.
 #       - Change $WorksheetIndex to the worksheet number, if necessary. Default assumption is the Stakes worksheet is the first in the worksheets collection.
-# 4. Run the script in PowerShell by clicking the green triangle in the man toolstrip.
+# 4. Run the script in PowerShell by clicking the green triangle in the main toolstrip.
 # 5. If the script ran successfully there will be a new file with the same name as the source file with a '.sql' file exension.
 # 6. Open the .sql file in SQL Server Management Studio and execute it.
 # 7. If all the queries succeeded then execute COMMIT to complete the transaction and write the records to the database.
@@ -23,6 +23,9 @@
 $SourceFilename = "Kennicott stakes 2018 vFinal.2.xlsx"
 $SourceFileDirectory = "C:\Temp\zGlaciers\"
 $WorksheetIndex = 1 # Set this to the worksheet index (1 assumes Stakes is the first worksheet
+
+# End user supplied parameters, nothing to edit below here
+# ---------------------------------------------------------------------------------------
 
 # Concatenate the source file name with the path
 $SourceFile = $SourceFileDirectory + $SourceFilename
