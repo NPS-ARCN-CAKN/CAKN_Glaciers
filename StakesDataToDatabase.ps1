@@ -6,10 +6,13 @@
 # Written by NPS\SDMiller, 2024-12-23
 
 # Instructions: 
-# 1. Change $SourceFilename, below, to your Excel file name.
-# 2. Change $SourceFileDirectory to the directory where $SourceFilename resides.
-# 3. Change $WorksheetIndex to the worksheet number, if necessary. Default assumption is the Stakes worksheet is the first in the worksheets collection.
-# 4. Run the script in PowerShell.
+# 1. Navigate to this file using Windows File Explorer
+# 2. Right click this file name and select 'Edit'. Ensure the script opens in Windows PowerShell ISE. You should see a split interface with code above and a PowerShell window below.
+# 3. Edit the script as follows:
+#       - Change $SourceFilename, below, to your Excel file name.
+#       - Change $SourceFileDirectory to the directory where $SourceFilename resides.
+#       - Change $WorksheetIndex to the worksheet number, if necessary. Default assumption is the Stakes worksheet is the first in the worksheets collection.
+# 4. Run the script in PowerShell by clicking the green triangle in the man toolstrip.
 # 5. If the script ran successfully there will be a new file with the same name as the source file with a '.sql' file exension.
 # 6. Open the .sql file in SQL Server Management Studio and execute it.
 # 7. If all the queries succeeded then execute COMMIT to complete the transaction and write the records to the database.
@@ -203,6 +206,8 @@ for ($row = 2; $row -le $RowCount; $row++) {
 
 # Dump out the SQL to a file with the same name as the input file but with a '.sql' extension.
 $SqlFile = $SourceFile + ".sql"
+$Msg = "SQL Insert queries script written to " + $SqlFile
+Write-Output $Msg
 $Sql | Out-File -FilePath $SqlFile
 
 # Close the workbook without saving
