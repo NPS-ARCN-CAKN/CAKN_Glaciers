@@ -208,7 +208,7 @@ for ($row = 2; $row -le $RowCount; $row++) {
 
 
 # Dump out the SQL to a file with the same name as the input file but with a '.sql' extension.
-$SqlFile = $SourceFile + ".sql"
+$SqlFile = $SourceFile + "_Stakes.sql"
 $Msg = "SQL Insert queries script written to " + $SqlFile
 Write-Output $Msg
 $Sql | Out-File -FilePath $SqlFile
