@@ -21,10 +21,15 @@ Written by NPS\SDMiller, 2024-12-23
 <!-- -->
 
 a.  Right click the .ps1 file
+
 b.  Select `Open with`
+
 c.  Select `Choose another app`
+
 d.  Select `Choose an app on your PC`
+
 e.  Select ``` C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe``(not powershell.exe). ```
+
 f.  You should see a split interface with code above and a PowerShell window below.
 
 <!-- -->
